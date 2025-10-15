@@ -1,6 +1,6 @@
 ## Dokumentasi API
 
-- **Base URL**: `https://alvan-test-javan.vercel.app/.vercel.app`
+- **Base URL**: `https://alvan-test-javan.vercel.app`
 - **Format Data**: `application/json`
 
 ---
