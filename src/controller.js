@@ -3,7 +3,7 @@ const User = require("./userModels");
 const getAllUsers = async (req, res) => {
   try {
     const users = await User.find();
-    res.json({
+    res.status(200).json({
       message: "Berhasil mendapatkan semua data user",
       data: users,
     });
@@ -18,7 +18,7 @@ const getUserById = async (req, res) => {
     if (!user) {
       return res.status(404).json({ message: `User dengan ID ${req.params.id} tidak ditemukan` });
     }
-    res.json({
+    res.status(200).json({
       message: `Berhasil mendapatkan data user dengan ID ${req.params.id}`,
       data: user,
     });
@@ -50,7 +50,7 @@ const updateUserById = async (req, res) => {
     if (!updatedUser) {
       return res.status(404).json({ message: `User dengan ID ${req.params.id} tidak ditemukan` });
     }
-    res.json({
+    res.status(200).json({
       message: `User dengan ID ${req.params.id} berhasil diperbarui`,
       data: updatedUser,
     });
@@ -65,7 +65,7 @@ const deleteUserById = async (req, res) => {
     if (!deletedUser) {
       return res.status(404).json({ message: `User dengan ID ${req.params.id} tidak ditemukan` });
     }
-    res.json({
+    res.status(200).json({
       message: `User dengan nama '${deletedUser.user}' berhasil dihapus`,
     });
   } catch (error) {
