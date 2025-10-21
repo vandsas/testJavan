@@ -17,7 +17,7 @@ Mengambil semua data pengguna yang tersimpan di database.
     "message": "Berhasil mendapatkan semua data user",
     "data": [
       {
-        "_id": "68efa46da763b7fc5c8b4621",
+        "id": "68efa46da763b7fc5c8b4621",
         "user": "Alvan",
         "nophone": "087736527765",
         "createdAt": "2025-10-15T13:41:01.999Z",
@@ -37,7 +37,7 @@ Mengambil data pengguna spesifik berdasarkan ID.
   ```json
   {
     "message": "Berhasil mendapatkan data user dengan ID 68efa46da763b7fc5c8b4621",
-    "data": { "_id": "...", "user": "...", ... }
+    "data": { "id": "...", "user": "...", ... }
   }
   ```
 - ** Error Response (404 Not Found)**:
@@ -62,7 +62,7 @@ Membuat pengguna baru.
   ```json
   {
     "message": "User baru berhasil dibuat",
-    "data": { "_id": "...", "user": "Nama Baru", ... }
+    "data": { "id": "...", "user": "Nama Baru", ... }
   }
   ```
 
@@ -72,7 +72,7 @@ Memperbarui data pengguna yang sudah ada berdasarkan ID.
 
 - **Method**: `PUT`
 - **Endpoint**: `/users/:id`
-- **Request Body** (sertakan hanya field yang ingin diubah):
+- **Request Body**:
   ```json
   {
     "nophone": "089876543210"
@@ -82,7 +82,7 @@ Memperbarui data pengguna yang sudah ada berdasarkan ID.
   ```json
   {
     "message": "User dengan ID ... berhasil diperbarui",
-    "data": { "_id": "...", "nophone": "089876543210", ... }
+    "data": { "id": "...", "nophone": "089876543210", ... }
   }
   ```
 
